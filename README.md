@@ -1,6 +1,7 @@
 # Projeto de Classificação de Doenças Cardiovasculares
 
 **Aluno:** Anderson Corrêa
+
 **Disciplina:** Fundamentos de Machine Learning com Scikit-Learn [26E1_2]
 
 ## Descrição

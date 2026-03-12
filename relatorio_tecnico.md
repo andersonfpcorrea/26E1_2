@@ -1,6 +1,7 @@
 # Relatório Técnico: Classificação de Doenças Cardiovasculares
 
 **Autor:** Anderson Corrêa
+
 **Disciplina:** Fundamentos de Machine Learning com Scikit-Learn
 
 ---
@@ -66,19 +67,19 @@ Machine learning pode aprender essas relações complexas a partir dos dados, fo
 
 O Perceptron aprende pesos que definem um hiperplano no espaço de features:
 
-| Feature                   | Coeficiente | Interpretação                                  |
-| ------------------------- | ----------- | ---------------------------------------------- |
-| alco (álcool)             | +4.22       | Consumo de álcool aumenta risco                |
-| ap_hi (pressão sistólica) | +3.02       | Maior pressão aumenta risco                    |
-| age_years (idade)         | +2.15       | Pacientes mais velhos têm maior risco          |
-| height (altura)           | +1.96       | Altura influencia positivamente                |
-| ap_lo (pressão diastólica)| +1.85       | Pressão diastólica elevada aumenta risco       |
-| bmi (IMC)                 | +1.83       | Maior IMC aumenta risco                        |
-| weight (peso)             | +0.76       | Maior peso aumenta risco                       |
-| active (atividade física) | +0.49       | Sinal positivo (contra-intuitivo)              |
-| gluc (glicose)            | -0.39       | Sinal negativo (contra-intuitivo)              |
-| cholesterol (colesterol)  | -2.01       | Sinal negativo (contra-intuitivo)              |
-| smoke (tabagismo)         | -3.85       | Sinal negativo (contra-intuitivo)              |
+| Feature                    | Coeficiente | Interpretação                            |
+| -------------------------- | ----------- | ---------------------------------------- |
+| alco (álcool)              | +4.22       | Consumo de álcool aumenta risco          |
+| ap_hi (pressão sistólica)  | +3.02       | Maior pressão aumenta risco              |
+| age_years (idade)          | +2.15       | Pacientes mais velhos têm maior risco    |
+| height (altura)            | +1.96       | Altura influencia positivamente          |
+| ap_lo (pressão diastólica) | +1.85       | Pressão diastólica elevada aumenta risco |
+| bmi (IMC)                  | +1.83       | Maior IMC aumenta risco                  |
+| weight (peso)              | +0.76       | Maior peso aumenta risco                 |
+| active (atividade física)  | +0.49       | Sinal positivo (contra-intuitivo)        |
+| gluc (glicose)             | -0.39       | Sinal negativo (contra-intuitivo)        |
+| cholesterol (colesterol)   | -2.01       | Sinal negativo (contra-intuitivo)        |
+| smoke (tabagismo)          | -3.85       | Sinal negativo (contra-intuitivo)        |
 
 _Nota: Sinais contra-intuitivos em algumas features (cholesterol, smoke negativos) refletem as limitações do Perceptron linear neste problema não-linear._
 
@@ -139,24 +140,24 @@ Resultados da validação cruzada em 5 folds (F1-Score):
 
 **Árvore de Decisão Otimizada (GridSearchCV):**
 
-| Fold               | F1-Score |
-| ------------------ | -------- |
-| 1                  | 70,8%    |
-| 2                  | 72,0%    |
-| 3                  | 70,6%    |
-| 4                  | 71,4%    |
-| 5                  | 71,9%    |
+| Fold               | F1-Score         |
+| ------------------ | ---------------- |
+| 1                  | 70,8%            |
+| 2                  | 72,0%            |
+| 3                  | 70,6%            |
+| 4                  | 71,4%            |
+| 5                  | 71,9%            |
 | **Média ± Desvio** | **71,3% ± 0,6%** |
 
 **Random Forest (padrão, 100 estimadores):**
 
-| Fold               | F1-Score |
-| ------------------ | -------- |
-| 1                  | 70,4%    |
-| 2                  | 70,6%    |
-| 3                  | 70,8%    |
-| 4                  | 70,4%    |
-| 5                  | 70,8%    |
+| Fold               | F1-Score         |
+| ------------------ | ---------------- |
+| 1                  | 70,4%            |
+| 2                  | 70,6%            |
+| 3                  | 70,8%            |
+| 4                  | 70,4%            |
+| 5                  | 70,8%            |
 | **Média ± Desvio** | **70,6% ± 0,2%** |
 
 O baixo desvio padrão em ambos os modelos indica desempenho robusto entre as diferentes divisões dos dados. O Random Forest apresenta variação ainda menor (0,2% vs 0,6%).
